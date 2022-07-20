@@ -1,0 +1,134 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '', sans-serif;
+  font-size: 13px;
+  min-height: 100vh;
+  
+}
+
+
+
+.container-tabella{
+
+	margin: 0px 30px;
+}
+
+.container-info{
+	margin: 0px 30px;
+
+	font-size: 17px;
+}
+
+.container-ordine{
+	margin: 0px 30px;
+
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td,.table th{
+  padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+}
+
+.table th{
+	background-color: black;
+	color:#ffffff;
+}
+
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+
+/*responsive*/
+
+@media(max-width: 600px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+
+.genera{
+	display: flex;
+	justify-content: center;
+	
+	margin: 20px auto;
+}
+ #bottone_fattura {
+	padding: 10px;
+	border: none;
+	background-color: #9932CC;
+	color: white;
+	font-size: 16px;
+	border-radius: 10px;
+}
+
+#bottone_fattura:hover{
+	animation: myAnim 1s ease 0s 1 normal forwards;
+	cursor: pointer;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
